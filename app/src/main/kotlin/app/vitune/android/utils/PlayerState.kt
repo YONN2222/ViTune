@@ -17,6 +17,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.media3.common.MediaItem
 import androidx.media3.common.PlaybackException
 import androidx.media3.common.Player
@@ -25,11 +26,10 @@ import app.vitune.android.LocalPlayerServiceBinder
 import app.vitune.android.R
 import app.vitune.android.service.PlayerService
 import app.vitune.core.ui.utils.EqualizerIntentBundleAccessor
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.isActive
 import kotlin.time.Duration
 import kotlin.time.Duration.Companion.milliseconds
-import androidx.compose.ui.res.stringResource
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.isActive
 
 @JvmInline
 value class PlayerScope internal constructor(val player: Player)

@@ -3,7 +3,6 @@ package app.vitune.android.ui.screens.settings
 import android.Manifest
 import android.content.Context
 import android.content.Intent
-import android.net.Uri
 import android.os.Build
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
@@ -26,6 +25,7 @@ import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.core.app.NotificationCompat
+import androidx.core.net.toUri
 import androidx.work.Constraints
 import androidx.work.CoroutineWorker
 import androidx.work.ExistingPeriodicWorkPolicy
@@ -54,11 +54,10 @@ import app.vitune.core.ui.utils.isCompositionLaunched
 import app.vitune.providers.github.GitHub
 import app.vitune.providers.github.models.Release
 import app.vitune.providers.github.requests.releases
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.withContext
 import kotlin.time.Duration
 import kotlin.time.toJavaDuration
-import androidx.core.net.toUri
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 
 private val VERSION_NAME = BuildConfig.VERSION_NAME.substringBeforeLast("-")
 private const val REPO_OWNER = "25huizengek1"
